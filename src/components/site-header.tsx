@@ -23,8 +23,8 @@ export function SiteHeader() {
           <img
             src={logoAsset.url}
             alt="Amigos Wooden Vases logo"
-            width={320}
-            height={110}
+            width={330}
+            height={186}
             className="h-11 w-auto sm:h-12"
           />
           <span className="sr-only">Amigos Wooden Vases</span>

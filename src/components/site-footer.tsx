@@ -13,7 +13,7 @@ export function SiteFooter() {
             src={logoAsset.url}
             alt="Amigos Wooden Vases logo"
             width={400}
-            height={140}
+            height={225}
             loading="lazy"
             className="h-14 w-auto"
           />
