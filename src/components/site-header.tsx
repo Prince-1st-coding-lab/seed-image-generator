@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X, MessageCircle } from "lucide-react";
 
-import logo from "@/assets/amigos-logo.png";
+import logoAsset from "@/assets/amigos-logo.png.asset.json";
 import { generalWhatsappLink } from "@/lib/site";
 
 const links = [
@@ -21,10 +21,10 @@ export function SiteHeader() {
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-3">
         <Link to="/" className="flex items-center" onClick={() => setOpen(false)}>
           <img
-            src={logo}
+            src={logoAsset.url}
             alt="Amigos Wooden Vases logo"
-            width={320}
-            height={110}
+            width={330}
+            height={186}
             className="h-11 w-auto sm:h-12"
           />
           <span className="sr-only">Amigos Wooden Vases</span>
