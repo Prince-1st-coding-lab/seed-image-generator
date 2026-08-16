@@ -15,7 +15,7 @@ export function SiteFooter() {
             width={400}
             height={225}
             loading="lazy"
-            className="h-14 w-auto"
+            className="h-20 w-auto"
           />
           <p className="mt-4 max-w-xs text-sm italic text-muted-foreground">{SITE.tagline}</p>
         </div>

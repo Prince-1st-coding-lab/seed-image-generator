@@ -25,7 +25,7 @@ export function SiteHeader() {
             alt="Amigos Wooden Vases logo"
             width={330}
             height={186}
-            className="h-11 w-auto sm:h-12"
+            className="h-14 w-auto sm:h-16"
           />
           <span className="sr-only">Amigos Wooden Vases</span>
         </Link>
