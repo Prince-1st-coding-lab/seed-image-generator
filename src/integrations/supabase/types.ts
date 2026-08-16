@@ -14,204 +14,16 @@ export type Database = {
   }
   public: {
     Tables: {
-      categories: {
-        Row: {
-          created_at: string
-          description: string | null
-          id: string
-          name: string
-          slug: string
-          sort_order: number
-          updated_at: string
-        }
-        Insert: {
-          created_at?: string
-          description?: string | null
-          id?: string
-          name: string
-          slug: string
-          sort_order?: number
-          updated_at?: string
-        }
-        Update: {
-          created_at?: string
-          description?: string | null
-          id?: string
-          name?: string
-          slug?: string
-          sort_order?: number
-          updated_at?: string
-        }
-        Relationships: []
-      }
-      gallery_images: {
-        Row: {
-          alt_text: string | null
-          caption: string | null
-          category_id: string | null
-          created_at: string
-          id: string
-          sort_order: number
-          status: string
-          storage_path: string
-          updated_at: string
-        }
-        Insert: {
-          alt_text?: string | null
-          caption?: string | null
-          category_id?: string | null
-          created_at?: string
-          id?: string
-          sort_order?: number
-          status?: string
-          storage_path: string
-          updated_at?: string
-        }
-        Update: {
-          alt_text?: string | null
-          caption?: string | null
-          category_id?: string | null
-          created_at?: string
-          id?: string
-          sort_order?: number
-          status?: string
-          storage_path?: string
-          updated_at?: string
-        }
-        Relationships: [
-          {
-            foreignKeyName: "gallery_images_category_id_fkey"
-            columns: ["category_id"]
-            isOneToOne: false
-            referencedRelation: "categories"
-            referencedColumns: ["id"]
-          },
-        ]
-      }
-      product_images: {
-        Row: {
-          alt_text: string | null
-          created_at: string
-          id: string
-          product_id: string
-          sort_order: number
-          storage_path: string
-        }
-        Insert: {
-          alt_text?: string | null
-          created_at?: string
-          id?: string
-          product_id: string
-          sort_order?: number
-          storage_path: string
-        }
-        Update: {
-          alt_text?: string | null
-          created_at?: string
-          id?: string
-          product_id?: string
-          sort_order?: number
-          storage_path?: string
-        }
-        Relationships: [
-          {
-            foreignKeyName: "product_images_product_id_fkey"
-            columns: ["product_id"]
-            isOneToOne: false
-            referencedRelation: "products"
-            referencedColumns: ["id"]
-          },
-        ]
-      }
-      products: {
-        Row: {
-          availability: string
-          category_id: string | null
-          created_at: string
-          currency: string
-          description: string | null
-          id: string
-          name: string
-          price: number | null
-          slug: string
-          sort_order: number
-          status: string
-          updated_at: string
-        }
-        Insert: {
-          availability?: string
-          category_id?: string | null
-          created_at?: string
-          currency?: string
-          description?: string | null
-          id?: string
-          name: string
-          price?: number | null
-          slug: string
-          sort_order?: number
-          status?: string
-          updated_at?: string
-        }
-        Update: {
-          availability?: string
-          category_id?: string | null
-          created_at?: string
-          currency?: string
-          description?: string | null
-          id?: string
-          name?: string
-          price?: number | null
-          slug?: string
-          sort_order?: number
-          status?: string
-          updated_at?: string
-        }
-        Relationships: [
-          {
-            foreignKeyName: "products_category_id_fkey"
-            columns: ["category_id"]
-            isOneToOne: false
-            referencedRelation: "categories"
-            referencedColumns: ["id"]
-          },
-        ]
-      }
-      user_roles: {
-        Row: {
-          created_at: string
-          id: string
-          role: Database["public"]["Enums"]["app_role"]
-          user_id: string
-        }
-        Insert: {
-          created_at?: string
-          id?: string
-          role: Database["public"]["Enums"]["app_role"]
-          user_id: string
-        }
-        Update: {
-          created_at?: string
-          id?: string
-          role?: Database["public"]["Enums"]["app_role"]
-          user_id?: string
-        }
-        Relationships: []
-      }
+      [_ in never]: never
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      has_role: {
-        Args: {
-          _role: Database["public"]["Enums"]["app_role"]
-          _user_id: string
-        }
-        Returns: boolean
-      }
+      [_ in never]: never
     }
     Enums: {
-      app_role: "admin"
+      [_ in never]: never
     }
     CompositeTypes: {
       [_ in never]: never
@@ -338,8 +150,6 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {
-      app_role: ["admin"],
-    },
+    Enums: {},
   },
 } as const
