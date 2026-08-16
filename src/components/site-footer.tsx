@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram, MapPin, Phone } from "lucide-react";
 
-import logo from "@/assets/amigos-logo.png.asset.json";
+import logo from "@/assets/amigos-logo.png";
 import { SITE } from "@/lib/site";
 
 export function SiteFooter() {
@@ -10,7 +10,7 @@ export function SiteFooter() {
       <div className="mx-auto grid max-w-6xl gap-10 px-6 py-14 sm:grid-cols-2 lg:grid-cols-3">
         <div>
           <img
-            src={logo.url}
+            src={logo}
             alt="Amigos Wooden Vases logo"
             width={400}
             height={140}

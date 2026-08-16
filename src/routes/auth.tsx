@@ -1,7 +1,7 @@
 import { createFileRoute, useNavigate, Link } from "@tanstack/react-router";
 import { useState } from "react";
 
-import logo from "@/assets/amigos-logo.png.asset.json";
+import logo from "@/assets/amigos-logo.png";
 import { supabase } from "@/integrations/supabase/client";
 import { claimFirstAdmin } from "@/lib/admin.functions";
 
@@ -62,7 +62,7 @@ function AuthPage() {
 
   return (
     <main className="mx-auto flex min-h-[70vh] max-w-md flex-col justify-center px-6 py-20">
-      <img src={logo.url} alt="Amigos Wooden Vases logo" className="mx-auto h-14 w-auto" />
+      <img src={logo} alt="Amigos Wooden Vases logo" className="mx-auto h-14 w-auto" />
       <h1 className="mt-8 text-center text-3xl tracking-tight">Admin area</h1>
       <p className="mt-2 text-center text-sm text-muted-foreground">
         Sign in to manage designs and gallery photos.
